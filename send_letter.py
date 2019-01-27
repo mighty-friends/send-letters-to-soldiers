@@ -2,7 +2,7 @@ import bridge
 
 # 편지를 보내고자 하는 사람의 사단/연대 카페에 가입해야 합니다. 또한 경우에 따라 코드의 변경이 필요합니다.
 
-id = 'your_id'
+email = 'your_id'
 password = 'your_password'
 
 title = "TEST"
@@ -12,7 +12,7 @@ content = '''이것은 편지 보내기 프로그램의 TEST입니다.
 건승을 빕니다.'''
 
 driver = bridge.init(True)
-bridge.login(driver, id, password)
+bridge.login(driver, email, password)
 bridge.send(driver, title, content)
 bridge.quit()
 

@@ -14,9 +14,9 @@ def init(isHeadless):
 	
 	return driver
 
-def login(driver, id, password):
+def login(driver, email, password):
 	driver.get('https://www.thecamp.or.kr/pcws/common/loginView.do')	
-	driver.find_element_by_name('loginUserId').send_keys(id)
+	driver.find_element_by_name('loginUserId').send_keys(email)
 	driver.find_element_by_name('loginUserPassword').send_keys(password)
 	driver.find_element_by_xpath("//div[@class='input_4']/button").click()
 	
